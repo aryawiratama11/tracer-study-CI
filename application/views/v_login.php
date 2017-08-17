@@ -7,6 +7,7 @@
 </head>
 <body>
 
+
 	<div class="col-md-6 col-md-offset-3">
 		<div class="col-login">
 			<div class="login-header">
@@ -16,6 +17,7 @@
 				<small>Silahkan Login dengan NPM, Password AMIKOM dan Password Perusahaan anda</small>
 			</div>
 			<hr>
+			<?php echo form_open("auth/cek_login"); ?>
 			<div class="field-login">
 				<div class="input-group input-group-l">
 					<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -31,6 +33,7 @@
 					</div>
 				</div>
 
+				<!--
 				<div class="input-group input-group-l">
 					<span class="input-group-addon"><i class="glyphicon glyphicon-ok"></i></span>
 					<div class="fg-line">
@@ -44,11 +47,12 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 				<button type="submit" class="btn btn-login btn-warning"><i class="glyphicon glyphicon-arrow-right"></i></button>
 			</div>
 		</div>
+		<?php echo form_close(); ?>
 	</div>
-
+	
 </body>
 </html>

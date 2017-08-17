@@ -1,952 +1,644 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Welcome To | Bootstrap Based Admin Template - Material Design</title>
+    <!-- Favicon-->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 
-    <title>Tracer Study - Amikom</title>
+    <!-- Bootstrap Core Css -->
+    <link href="<?php echo base_url() ?>theme/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
 
-    <!-- readmore css -->
-    <link href="<?php echo base_url() ?>asset/css/readmore.css" rel="stylesheet">
+    <!-- Waves Effect Css -->
+    <link href="<?php echo base_url() ?>theme/plugins/node-waves/waves.css" rel="stylesheet" />
 
-    <!-- Bootstrap Core CSS -->
-    <link href="<?php echo base_url() ?>theme/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Animation Css -->
+    <link href="<?php echo base_url() ?>theme/plugins/animate-css/animate.css" rel="stylesheet" />
 
-    <!-- MetisMenu CSS -->
-    <link href="<?php echo base_url() ?>theme/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <!-- Morris Chart Css-->
+    <link href="<?php echo base_url() ?>theme/plugins/morrisjs/morris.css" rel="stylesheet" />
 
-    <!-- Custom CSS -->
-    <link href="<?php echo base_url() ?>theme/dist/css/sb-admin-2.css" rel="stylesheet">
+    <!-- Custom Css -->
+    <link href="<?php echo base_url() ?>theme/css/style.css" rel="stylesheet">
 
-    <!-- Morris Charts CSS -->
-    <link href="<?php echo base_url() ?>theme/vendor/morrisjs/morris.css" rel="stylesheet">
+    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+    <link href="<?php echo base_url() ?>theme/css/themes/all-themes.css" rel="stylesheet" />
+</head>
 
-    <!-- Custom Fonts -->
-    <link href="<?php echo base_url() ?>theme/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-    </head>
-
-    <body>
-
-        <div id="wrapper">
-
-            <!-- Navigation -->
-            <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
+<body class="theme-purple">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="preloader">
+                <div class="spinner-layer pl-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
                 </div>
-                <!-- /.navbar-header -->
+            </div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- #END# Page Loader -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <div class="search-icon">
+            <i class="material-icons">search</i>
+        </div>
+        <input type="text" placeholder="START TYPING...">
+        <div class="close-search">
+            <i class="material-icons">close</i>
+        </div>
+    </div>
+    <!-- #END# Search Bar -->
+    <!-- Top Bar -->
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
+                <a href="javascript:void(0);" class="bars"></a>
+                <a class="image" href="<?php echo base_url(); ?>" >
+                <img src="http://amikom.ac.id/template/assets_dashboard/img/amikom.png" style="float: left; margin: 5 15 0 0;" /></a>
+                <a class="navbar-brand" href="<?php echo base_url(); ?>" >   UNIVERSITAS AMIKOM YOGYAKARTA</a>
+                
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
 
-                <ul class="nav navbar-top-links navbar-right">
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
+                <div class="nav navbar-nav navbar-right">
+                <a class="btn btn-danger waves-effect" href="#" style="margin: 20 20;">Logout</a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- #Top Bar -->
+    <section>
+        <!-- Left Sidebar -->
+        <aside id="leftsidebar" class="sidebar">
+            <!-- User Info -->
+            <div class="user-info">
+                <div class="image">
+                    <img src="<?php echo base_url() ?>theme/images/user.png" width="48" height="48" alt="User" />
+                </div>
+                <div class="info-container">
+                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $nama; ?></div>
+                    <div class="email">john.doe@example.com</div>
+                    
+                </div>
+            </div>
+            <!-- #User Info -->
+            <!-- Menu -->
+            <div class="menu">
+                <ul class="list">
+                    <li class="header">MAIN NAVIGATION</li>
+                    <li class="active">
+                        <a href="index.html">
+                            <i class="material-icons">home</i>
+                            <span>Home</span>
                         </a>
-                        <ul class="dropdown-menu dropdown-messages">
+                    </li>
+                    <li>
+                        <a href="pages/typography.html">
+                            <i class="material-icons">text_fields</i>
+                            <span>Typography</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pages/helper-classes.html">
+                            <i class="material-icons">layers</i>
+                            <span>Helper Classes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="menu-toggle">
+                            <i class="material-icons">widgets</i>
+                            <span>Widgets</span>
+                        </a>
+                        <ul class="ml-menu">
                             <li>
-                                <a href="#">
-                                    <div>
-                                        <strong>John Smith</strong>
-                                        <span class="pull-right text-muted">
-                                            <em>Yesterday</em>
-                                        </span>
-                                    </div>
-                                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                                <a href="javascript:void(0);" class="menu-toggle">
+                                    <span>Cards</span>
                                 </a>
+                                <ul class="ml-menu">
+                                    <li>
+                                        <a href="pages/widgets/cards/basic.html">Basic</a>
+                                    </li>
+                                    <li>
+                                        <a href="pages/widgets/cards/colored.html">Colored</a>
+                                    </li>
+                                    <li>
+                                        <a href="pages/widgets/cards/no-header.html">No Header</a>
+                                    </li>
+                                </ul>
                             </li>
-                            <li class="divider"></li>
                             <li>
-                                <a href="#">
-                                    <div>
-                                        <strong>John Smith</strong>
-                                        <span class="pull-right text-muted">
-                                            <em>Yesterday</em>
-                                        </span>
-                                    </div>
-                                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                                <a href="javascript:void(0);" class="menu-toggle">
+                                    <span>Infobox</span>
                                 </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="#">
-                                    <div>
-                                        <strong>John Smith</strong>
-                                        <span class="pull-right text-muted">
-                                            <em>Yesterday</em>
-                                        </span>
-                                    </div>
-                                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a class="text-center" href="#">
-                                    <strong>Read All Messages</strong>
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
+                                <ul class="ml-menu">
+                                    <li>
+                                        <a href="pages/widgets/infobox/infobox-1.html">Infobox-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="pages/widgets/infobox/infobox-2.html">Infobox-2</a>
+                                    </li>
+                                    <li>
+                                        <a href="pages/widgets/infobox/infobox-3.html">Infobox-3</a>
+                                    </li>
+                                    <li>
+                                        <a href="pages/widgets/infobox/infobox-4.html">Infobox-4</a>
+                                    </li>
+                                    <li>
+                                        <a href="pages/widgets/infobox/infobox-5.html">Infobox-5</a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
-                        <!-- /.dropdown-messages -->
                     </li>
-                    <!-- /.dropdown -->
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    <li>
+                        <a href="javascript:void(0);" class="menu-toggle">
+                            <i class="material-icons">swap_calls</i>
+                            <span>User Interface (UI)</span>
                         </a>
-                        <ul class="dropdown-menu dropdown-tasks">
+                        <ul class="ml-menu">
                             <li>
-                                <a href="#">
-                                    <div>
-                                        <p>
-                                            <strong>Task 1</strong>
-                                            <span class="pull-right text-muted">40% Complete</span>
-                                        </p>
-                                        <div class="progress progress-striped active">
-                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                                <span class="sr-only">40% Complete (success)</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
+                                <a href="pages/ui/alerts.html">Alerts</a>
                             </li>
-                            <li class="divider"></li>
                             <li>
-                                <a href="#">
-                                    <div>
-                                        <p>
-                                            <strong>Task 2</strong>
-                                            <span class="pull-right text-muted">20% Complete</span>
-                                        </p>
-                                        <div class="progress progress-striped active">
-                                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                                                <span class="sr-only">20% Complete</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
+                                <a href="pages/ui/animations.html">Animations</a>
                             </li>
-                            <li class="divider"></li>
                             <li>
-                                <a href="#">
-                                    <div>
-                                        <p>
-                                            <strong>Task 3</strong>
-                                            <span class="pull-right text-muted">60% Complete</span>
-                                        </p>
-                                        <div class="progress progress-striped active">
-                                            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                                <span class="sr-only">60% Complete (warning)</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
+                                <a href="pages/ui/badges.html">Badges</a>
                             </li>
-                            <li class="divider"></li>
+
                             <li>
-                                <a href="#">
-                                    <div>
-                                        <p>
-                                            <strong>Task 4</strong>
-                                            <span class="pull-right text-muted">80% Complete</span>
-                                        </p>
-                                        <div class="progress progress-striped active">
-                                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                                                <span class="sr-only">80% Complete (danger)</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
+                                <a href="pages/ui/breadcrumbs.html">Breadcrumbs</a>
                             </li>
-                            <li class="divider"></li>
                             <li>
-                                <a class="text-center" href="#">
-                                    <strong>See All Tasks</strong>
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
+                                <a href="pages/ui/buttons.html">Buttons</a>
+                            </li>
+                            <li>
+                                <a href="pages/ui/collapse.html">Collapse</a>
+                            </li>
+                            <li>
+                                <a href="pages/ui/colors.html">Colors</a>
+                            </li>
+                            <li>
+                                <a href="pages/ui/dialogs.html">Dialogs</a>
+                            </li>
+                            <li>
+                                <a href="pages/ui/icons.html">Icons</a>
+                            </li>
+                            <li>
+                                <a href="pages/ui/labels.html">Labels</a>
+                            </li>
+                            <li>
+                                <a href="pages/ui/list-group.html">List Group</a>
+                            </li>
+                            <li>
+                                <a href="pages/ui/media-object.html">Media Object</a>
+                            </li>
+                            <li>
+                                <a href="pages/ui/modals.html">Modals</a>
+                            </li>
+                            <li>
+                                <a href="pages/ui/notifications.html">Notifications</a>
+                            </li>
+                            <li>
+                                <a href="pages/ui/pagination.html">Pagination</a>
+                            </li>
+                            <li>
+                                <a href="pages/ui/preloaders.html">Preloaders</a>
+                            </li>
+                            <li>
+                                <a href="pages/ui/progressbars.html">Progress Bars</a>
+                            </li>
+                            <li>
+                                <a href="pages/ui/range-sliders.html">Range Sliders</a>
+                            </li>
+                            <li>
+                                <a href="pages/ui/sortable-nestable.html">Sortable & Nestable</a>
+                            </li>
+                            <li>
+                                <a href="pages/ui/tabs.html">Tabs</a>
+                            </li>
+                            <li>
+                                <a href="pages/ui/thumbnails.html">Thumbnails</a>
+                            </li>
+                            <li>
+                                <a href="pages/ui/tooltips-popovers.html">Tooltips & Popovers</a>
+                            </li>
+                            <li>
+                                <a href="pages/ui/waves.html">Waves</a>
                             </li>
                         </ul>
-                        <!-- /.dropdown-tasks -->
                     </li>
-                    <!-- /.dropdown -->
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    <li>
+                        <a href="javascript:void(0);" class="menu-toggle">
+                            <i class="material-icons">assignment</i>
+                            <span>Forms</span>
                         </a>
-                        <ul class="dropdown-menu dropdown-alerts">
+                        <ul class="ml-menu">
                             <li>
-                                <a href="#">
-                                    <div>
-                                        <i class="fa fa-comment fa-fw"></i> New Comment
-                                        <span class="pull-right text-muted small">4 minutes ago</span>
-                                    </div>
-                                </a>
+                                <a href="pages/forms/basic-form-elements.html">Basic Form Elements</a>
                             </li>
-                            <li class="divider"></li>
                             <li>
-                                <a href="#">
-                                    <div>
-                                        <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-                                        <span class="pull-right text-muted small">12 minutes ago</span>
-                                    </div>
-                                </a>
+                                <a href="pages/forms/advanced-form-elements.html">Advanced Form Elements</a>
                             </li>
-                            <li class="divider"></li>
                             <li>
-                                <a href="#">
-                                    <div>
-                                        <i class="fa fa-envelope fa-fw"></i> Message Sent
-                                        <span class="pull-right text-muted small">4 minutes ago</span>
-                                    </div>
-                                </a>
+                                <a href="pages/forms/form-examples.html">Form Examples</a>
                             </li>
-                            <li class="divider"></li>
                             <li>
-                                <a href="#">
-                                    <div>
-                                        <i class="fa fa-tasks fa-fw"></i> New Task
-                                        <span class="pull-right text-muted small">4 minutes ago</span>
-                                    </div>
-                                </a>
+                                <a href="pages/forms/form-validation.html">Form Validation</a>
                             </li>
-                            <li class="divider"></li>
                             <li>
-                                <a href="#">
-                                    <div>
-                                        <i class="fa fa-upload fa-fw"></i> Server Rebooted
-                                        <span class="pull-right text-muted small">4 minutes ago</span>
-                                    </div>
-                                </a>
+                                <a href="pages/forms/form-wizard.html">Form Wizard</a>
                             </li>
-                            <li class="divider"></li>
                             <li>
-                                <a class="text-center" href="#">
-                                    <strong>See All Alerts</strong>
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
+                                <a href="pages/forms/editors.html">Editors</a>
                             </li>
                         </ul>
-                        <!-- /.dropdown-alerts -->
                     </li>
-                    <!-- /.dropdown -->
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    <li>
+                        <a href="javascript:void(0);" class="menu-toggle">
+                            <i class="material-icons">view_list</i>
+                            <span>Tables</span>
                         </a>
-                        <ul class="dropdown-menu dropdown-user">
-                            <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        <ul class="ml-menu">
+                            <li>
+                                <a href="pages/tables/normal-tables.html">Normal Tables</a>
                             </li>
-                            <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                            <li>
+                                <a href="pages/tables/jquery-datatable.html">Jquery Datatables</a>
                             </li>
-                            <li class="divider"></li>
-                            <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            <li>
+                                <a href="pages/tables/editable-table.html">Editable Tables</a>
                             </li>
                         </ul>
-                        <!-- /.dropdown-user -->
                     </li>
-                    <!-- /.dropdown -->
+                    <li>
+                        <a href="javascript:void(0);" class="menu-toggle">
+                            <i class="material-icons">perm_media</i>
+                            <span>Medias</span>
+                        </a>
+                        <ul class="ml-menu">
+                            <li>
+                                <a href="pages/medias/image-gallery.html">Image Gallery</a>
+                            </li>
+                            <li>
+                                <a href="pages/medias/carousel.html">Carousel</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="menu-toggle">
+                            <i class="material-icons">pie_chart</i>
+                            <span>Charts</span>
+                        </a>
+                        <ul class="ml-menu">
+                            <li>
+                                <a href="pages/charts/morris.html">Morris</a>
+                            </li>
+                            <li>
+                                <a href="pages/charts/flot.html">Flot</a>
+                            </li>
+                            <li>
+                                <a href="pages/charts/chartjs.html">ChartJS</a>
+                            </li>
+                            <li>
+                                <a href="pages/charts/sparkline.html">Sparkline</a>
+                            </li>
+                            <li>
+                                <a href="pages/charts/jquery-knob.html">Jquery Knob</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="menu-toggle">
+                            <i class="material-icons">content_copy</i>
+                            <span>Example Pages</span>
+                        </a>
+                        <ul class="ml-menu">
+                            <li>
+                                <a href="pages/examples/sign-in.html">Sign In</a>
+                            </li>
+                            <li>
+                                <a href="pages/examples/sign-up.html">Sign Up</a>
+                            </li>
+                            <li>
+                                <a href="pages/examples/forgot-password.html">Forgot Password</a>
+                            </li>
+                            <li>
+                                <a href="pages/examples/blank.html">Blank Page</a>
+                            </li>
+                            <li>
+                                <a href="pages/examples/404.html">404 - Not Found</a>
+                            </li>
+                            <li>
+                                <a href="pages/examples/500.html">500 - Server Error</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="menu-toggle">
+                            <i class="material-icons">map</i>
+                            <span>Maps</span>
+                        </a>
+                        <ul class="ml-menu">
+                            <li>
+                                <a href="pages/maps/google.html">Google Map</a>
+                            </li>
+                            <li>
+                                <a href="pages/maps/yandex.html">YandexMap</a>
+                            </li>
+                            <li>
+                                <a href="pages/maps/jvectormap.html">jVectorMap</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="menu-toggle">
+                            <i class="material-icons">trending_down</i>
+                            <span>Multi Level Menu</span>
+                        </a>
+                        <ul class="ml-menu">
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <span>Menu Item</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <span>Menu Item - 2</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="menu-toggle">
+                                    <span>Level - 2</span>
+                                </a>
+                                <ul class="ml-menu">
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <span>Menu Item</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="menu-toggle">
+                                            <span>Level - 3</span>
+                                        </a>
+                                        <ul class="ml-menu">
+                                            <li>
+                                                <a href="javascript:void(0);">
+                                                    <span>Level - 4</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="pages/changelogs.html">
+                            <i class="material-icons">update</i>
+                            <span>Changelogs</span>
+                        </a>
+                    </li>
+                    <li class="header">LABELS</li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <i class="material-icons col-red">donut_large</i>
+                            <span>Important</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <i class="material-icons col-amber">donut_large</i>
+                            <span>Warning</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <i class="material-icons col-light-blue">donut_large</i>
+                            <span>Information</span>
+                        </a>
+                    </li>
                 </ul>
-                <!-- /.navbar-top-links -->
-
-                <div class="navbar-default sidebar" role="navigation">
-                    <div class="sidebar-nav navbar-collapse">
-                        <ul class="nav" id="side-menu">
-                            <li class="sidebar-search">
-                                <!-- SIDEBAR USERPIC -->
-                                <div class="profile-userpic">
-                                    <img src="https://scontent-sit4-1.xx.fbcdn.net/v/t1.0-1/p160x160/10421289_490195217786123_6146734081895809525_n.jpg?oh=d69123693da03d99d3577a8d04ae22f0&oe=5A001ED3" class="img-responsive" alt="">
+            </div>
+            <!-- #Menu -->
+            <!-- Footer -->
+            <div class="legal">
+                <div class="copyright">
+                    &copy; 2016 - 2017 <a href="javascript:void(0);">AdminBSB - Material Design</a>.
+                </div>
+                <div class="version">
+                    <b>Version: </b> 1.0.5
+                </div>
+            </div>
+            <!-- #Footer -->
+        </aside>
+        <!-- #END# Left Sidebar -->
+        <!-- Right Sidebar -->
+        <aside id="rightsidebar" class="right-sidebar">
+            <ul class="nav nav-tabs tab-nav-right" role="tablist">
+                <li role="presentation" class="active"><a href="#skins" data-toggle="tab">SKINS</a></li>
+                <li role="presentation"><a href="#settings" data-toggle="tab">SETTINGS</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active in active" id="skins">
+                    <ul class="demo-choose-skin">
+                        <li data-theme="red" class="active">
+                            <div class="red"></div>
+                            <span>Red</span>
+                        </li>
+                        <li data-theme="pink">
+                            <div class="pink"></div>
+                            <span>Pink</span>
+                        </li>
+                        <li data-theme="purple">
+                            <div class="purple"></div>
+                            <span>Purple</span>
+                        </li>
+                        <li data-theme="deep-purple">
+                            <div class="deep-purple"></div>
+                            <span>Deep Purple</span>
+                        </li>
+                        <li data-theme="indigo">
+                            <div class="indigo"></div>
+                            <span>Indigo</span>
+                        </li>
+                        <li data-theme="blue">
+                            <div class="blue"></div>
+                            <span>Blue</span>
+                        </li>
+                        <li data-theme="light-blue">
+                            <div class="light-blue"></div>
+                            <span>Light Blue</span>
+                        </li>
+                        <li data-theme="cyan">
+                            <div class="cyan"></div>
+                            <span>Cyan</span>
+                        </li>
+                        <li data-theme="teal">
+                            <div class="teal"></div>
+                            <span>Teal</span>
+                        </li>
+                        <li data-theme="green">
+                            <div class="green"></div>
+                            <span>Green</span>
+                        </li>
+                        <li data-theme="light-green">
+                            <div class="light-green"></div>
+                            <span>Light Green</span>
+                        </li>
+                        <li data-theme="lime">
+                            <div class="lime"></div>
+                            <span>Lime</span>
+                        </li>
+                        <li data-theme="yellow">
+                            <div class="yellow"></div>
+                            <span>Yellow</span>
+                        </li>
+                        <li data-theme="amber">
+                            <div class="amber"></div>
+                            <span>Amber</span>
+                        </li>
+                        <li data-theme="orange">
+                            <div class="orange"></div>
+                            <span>Orange</span>
+                        </li>
+                        <li data-theme="deep-orange">
+                            <div class="deep-orange"></div>
+                            <span>Deep Orange</span>
+                        </li>
+                        <li data-theme="brown">
+                            <div class="brown"></div>
+                            <span>Brown</span>
+                        </li>
+                        <li data-theme="grey">
+                            <div class="grey"></div>
+                            <span>Grey</span>
+                        </li>
+                        <li data-theme="blue-grey">
+                            <div class="blue-grey"></div>
+                            <span>Blue Grey</span>
+                        </li>
+                        <li data-theme="black">
+                            <div class="black"></div>
+                            <span>Black</span>
+                        </li>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="settings">
+                    <div class="demo-settings">
+                        <p>GENERAL SETTINGS</p>
+                        <ul class="setting-list">
+                            <li>
+                                <span>Report Panel Usage</span>
+                                <div class="switch">
+                                    <label><input type="checkbox" checked><span class="lever"></span></label>
                                 </div>
-                                <!-- END SIDEBAR USERPIC -->
-                                <!-- SIDEBAR USER TITLE -->
-                                <div class="profile-usertitle">
-                                    <div class="profile-usertitle-name">
-                                        Marcus Doe
-                                    </div>
-                                    <div class="profile-usertitle-job">
-                                        Developer
-                                    </div>
+                            </li>
+                            <li>
+                                <span>Email Redirect</span>
+                                <div class="switch">
+                                    <label><input type="checkbox"><span class="lever"></span></label>
                                 </div>
-                                <!-- END SIDEBAR USER TITLE -->
-                                <!-- SIDEBAR BUTTONS -->
-                                <div class="profile-userbuttons">
-                                    <button type="button" class="btn btn-success btn-sm">Follow</button>
-                                    <button type="button" class="btn btn-danger btn-sm">Message</button>
+                            </li>
+                        </ul>
+                        <p>SYSTEM SETTINGS</p>
+                        <ul class="setting-list">
+                            <li>
+                                <span>Notifications</span>
+                                <div class="switch">
+                                    <label><input type="checkbox" checked><span class="lever"></span></label>
                                 </div>
-                                <!-- END SIDEBAR BUTTONS -->
                             </li>
                             <li>
-                                <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                                <span>Auto Updates</span>
+                                <div class="switch">
+                                    <label><input type="checkbox" checked><span class="lever"></span></label>
+                                </div>
+                            </li>
+                        </ul>
+                        <p>ACCOUNT SETTINGS</p>
+                        <ul class="setting-list">
+                            <li>
+                                <span>Offline</span>
+                                <div class="switch">
+                                    <label><input type="checkbox"><span class="lever"></span></label>
+                                </div>
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
-                                <ul class="nav nav-second-level">
-                                    <li>
-                                        <a href="flot.html">Flot Charts</a>
-                                    </li>
-                                    <li>
-                                        <a href="morris.html">Morris.js Charts</a>
-                                    </li>
-                                </ul>
-                                <!-- /.nav-second-level -->
-                            </li>
-                            <li>
-                                <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
-                            </li>
-                            <li>
-                                <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
-                                <ul class="nav nav-second-level">
-                                    <li>
-                                        <a href="panels-wells.html">Panels and Wells</a>
-                                    </li>
-                                    <li>
-                                        <a href="buttons.html">Buttons</a>
-                                    </li>
-                                    <li>
-                                        <a href="notifications.html">Notifications</a>
-                                    </li>
-                                    <li>
-                                        <a href="typography.html">Typography</a>
-                                    </li>
-                                    <li>
-                                        <a href="icons.html"> Icons</a>
-                                    </li>
-                                    <li>
-                                        <a href="grid.html">Grid</a>
-                                    </li>
-                                </ul>
-                                <!-- /.nav-second-level -->
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
-                                <ul class="nav nav-second-level">
-                                    <li>
-                                        <a href="#">Second Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Second Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level <span class="fa arrow"></span></a>
-                                        <ul class="nav nav-third-level">
-                                            <li>
-                                                <a href="#">Third Level Item</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Third Level Item</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Third Level Item</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Third Level Item</a>
-                                            </li>
-                                        </ul>
-                                        <!-- /.nav-third-level -->
-                                    </li>
-                                </ul>
-                                <!-- /.nav-second-level -->
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
-                                <ul class="nav nav-second-level">
-                                    <li>
-                                        <a href="blank.html">Blank Page</a>
-                                    </li>
-                                    <li>
-                                        <a href="login.html">Login Page</a>
-                                    </li>
-                                </ul>
-                                <!-- /.nav-second-level -->
+                                <span>Location Permission</span>
+                                <div class="switch">
+                                    <label><input type="checkbox" checked><span class="lever"></span></label>
+                                </div>
                             </li>
                         </ul>
                     </div>
-                    <!-- /.sidebar-collapse -->
                 </div>
-                <!-- /.navbar-static-side -->
-            </nav>
+            </div>
+        </aside>
+        <!-- #END# Right Sidebar -->
+    </section>
 
-            <div id="page-wrapper">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">Dashboard</h1>
-                    </div>
-                    <!-- /.col-lg-12 -->
-                </div>
-                <!-- /.row -->
-                <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-comments fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge">26</div>
-                                        <div>New Comments!</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#">
-                                <div class="panel-footer">
-                                    <span class="pull-left">View Details</span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-green">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-tasks fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge">12</div>
-                                        <div>New Tasks!</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#">
-                                <div class="panel-footer">
-                                    <span class="pull-left">View Details</span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-yellow">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-shopping-cart fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge">124</div>
-                                        <div>New Orders!</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#">
-                                <div class="panel-footer">
-                                    <span class="pull-left">View Details</span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-red">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-support fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge">13</div>
-                                        <div>Support Tickets!</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#">
-                                <div class="panel-footer">
-                                    <span class="pull-left">View Details</span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.row -->
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <i class="fa fa-bar-chart-o fa-fw"></i> Area Chart Example
-                                <div class="pull-right">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-                                            Actions
-                                            <span class="caret"></span>
-                                        </button>
-                                        <ul class="dropdown-menu pull-right" role="menu">
-                                            <li><a href="#">Action</a>
-                                            </li>
-                                            <li><a href="#">Another action</a>
-                                            </li>
-                                            <li><a href="#">Something else here</a>
-                                            </li>
-                                            <li class="divider"></li>
-                                            <li><a href="#">Separated link</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /.panel-heading -->
-                            <div class="panel-body">
-                                <div id="morris-area-chart"></div>
-                            </div>
-                            <!-- /.panel-body -->
-                        </div>
-                        <!-- /.panel -->
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <i class="fa fa-bar-chart-o fa-fw"></i> Bar Chart Example
-                                <div class="pull-right">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-                                            Actions
-                                            <span class="caret"></span>
-                                        </button>
-                                        <ul class="dropdown-menu pull-right" role="menu">
-                                            <li><a href="#">Action</a>
-                                            </li>
-                                            <li><a href="#">Another action</a>
-                                            </li>
-                                            <li><a href="#">Something else here</a>
-                                            </li>
-                                            <li class="divider"></li>
-                                            <li><a href="#">Separated link</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /.panel-heading -->
-                            <div class="panel-body">
-                                <div class="row">
-                                    <div class="col-lg-4">
-                                        <div class="table-responsive">
-                                            <table class="table table-bordered table-hover table-striped">
-                                                <thead>
-                                                    <tr>
-                                                        <th>#</th>
-                                                        <th>Date</th>
-                                                        <th>Time</th>
-                                                        <th>Amount</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>3326</td>
-                                                        <td>10/21/2013</td>
-                                                        <td>3:29 PM</td>
-                                                        <td>$321.33</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>3325</td>
-                                                        <td>10/21/2013</td>
-                                                        <td>3:20 PM</td>
-                                                        <td>$234.34</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>3324</td>
-                                                        <td>10/21/2013</td>
-                                                        <td>3:03 PM</td>
-                                                        <td>$724.17</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>3323</td>
-                                                        <td>10/21/2013</td>
-                                                        <td>3:00 PM</td>
-                                                        <td>$23.71</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>3322</td>
-                                                        <td>10/21/2013</td>
-                                                        <td>2:49 PM</td>
-                                                        <td>$8345.23</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>3321</td>
-                                                        <td>10/21/2013</td>
-                                                        <td>2:23 PM</td>
-                                                        <td>$245.12</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>3320</td>
-                                                        <td>10/21/2013</td>
-                                                        <td>2:15 PM</td>
-                                                        <td>$5663.54</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>3319</td>
-                                                        <td>10/21/2013</td>
-                                                        <td>2:13 PM</td>
-                                                        <td>$943.45</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <!-- /.table-responsive -->
-                                    </div>
-                                    <!-- /.col-lg-4 (nested) -->
-                                    <div class="col-lg-8">
-                                        <div id="morris-bar-chart"></div>
-                                    </div>
-                                    <!-- /.col-lg-8 (nested) -->
-                                </div>
-                                <!-- /.row -->
-                            </div>
-                            <!-- /.panel-body -->
-                        </div>
-                        <!-- /.panel -->
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <i class="fa fa-clock-o fa-fw"></i> Responsive Timeline
-                            </div>
-                            <!-- /.panel-heading -->
-                            <div class="panel-body">
-                                <ul class="timeline">
-                                    <li>
-                                        <div class="timeline-badge"><i class="fa fa-check"></i>
-                                        </div>
-                                        <div class="timeline-panel">
-                                            <div class="timeline-heading">
-                                                <h4 class="timeline-title">Lorem ipsum dolor</h4>
-                                                <p><small class="text-muted"><i class="fa fa-clock-o"></i> 11 hours ago via Twitter</small>
-                                                </p>
-                                            </div>
-                                            <div class="timeline-body">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero laboriosam dolor perspiciatis omnis exercitationem. Beatae, officia pariatur? Est cum veniam excepturi. Maiores praesentium, porro voluptas suscipit facere rem dicta, debitis.</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="timeline-inverted">
-                                        <div class="timeline-badge warning"><i class="fa fa-credit-card"></i>
-                                        </div>
-                                        <div class="timeline-panel">
-                                            <div class="timeline-heading">
-                                                <h4 class="timeline-title">Lorem ipsum dolor</h4>
-                                            </div>
-                                            <div class="timeline-body">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolorem quibusdam, tenetur commodi provident cumque magni voluptatem libero, quis rerum. Fugiat esse debitis optio, tempore. Animi officiis alias, officia repellendus.</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium maiores odit qui est tempora eos, nostrum provident explicabo dignissimos debitis vel! Adipisci eius voluptates, ad aut recusandae minus eaque facere.</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="timeline-badge danger"><i class="fa fa-bomb"></i>
-                                        </div>
-                                        <div class="timeline-panel">
-                                            <div class="timeline-heading">
-                                                <h4 class="timeline-title">Lorem ipsum dolor</h4>
-                                            </div>
-                                            <div class="timeline-body">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus numquam facilis enim eaque, tenetur nam id qui vel velit similique nihil iure molestias aliquam, voluptatem totam quaerat, magni commodi quisquam.</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="timeline-inverted">
-                                        <div class="timeline-panel">
-                                            <div class="timeline-heading">
-                                                <h4 class="timeline-title">Lorem ipsum dolor</h4>
-                                            </div>
-                                            <div class="timeline-body">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates est quaerat asperiores sapiente, eligendi, nihil. Itaque quos, alias sapiente rerum quas odit! Aperiam officiis quidem delectus libero, omnis ut debitis!</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="timeline-badge info"><i class="fa fa-save"></i>
-                                        </div>
-                                        <div class="timeline-panel">
-                                            <div class="timeline-heading">
-                                                <h4 class="timeline-title">Lorem ipsum dolor</h4>
-                                            </div>
-                                            <div class="timeline-body">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis minus modi quam ipsum alias at est molestiae excepturi delectus nesciunt, quibusdam debitis amet, beatae consequuntur impedit nulla qui! Laborum, atque.</p>
-                                                <hr>
-                                                <div class="btn-group">
-                                                    <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
-                                                        <i class="fa fa-gear"></i> <span class="caret"></span>
-                                                    </button>
-                                                    <ul class="dropdown-menu" role="menu">
-                                                        <li><a href="#">Action</a>
-                                                        </li>
-                                                        <li><a href="#">Another action</a>
-                                                        </li>
-                                                        <li><a href="#">Something else here</a>
-                                                        </li>
-                                                        <li class="divider"></li>
-                                                        <li><a href="#">Separated link</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="timeline-panel">
-                                            <div class="timeline-heading">
-                                                <h4 class="timeline-title">Lorem ipsum dolor</h4>
-                                            </div>
-                                            <div class="timeline-body">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi fuga odio quibusdam. Iure expedita, incidunt unde quis nam! Quod, quisquam. Officia quam qui adipisci quas consequuntur nostrum sequi. Consequuntur, commodi.</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="timeline-inverted">
-                                        <div class="timeline-badge success"><i class="fa fa-graduation-cap"></i>
-                                        </div>
-                                        <div class="timeline-panel">
-                                            <div class="timeline-heading">
-                                                <h4 class="timeline-title">Lorem ipsum dolor</h4>
-                                            </div>
-                                            <div class="timeline-body">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt obcaecati, quaerat tempore officia voluptas debitis consectetur culpa amet, accusamus dolorum fugiat, animi dicta aperiam, enim incidunt quisquam maxime neque eaque.</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- /.panel-body -->
-                        </div>
-                        <!-- /.panel -->
-                    </div>
-                    <!-- /.col-lg-8 -->
-                    <div class="col-lg-4">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <i class="fa fa-bell fa-fw"></i> Notifications Panel
-                            </div>
-                            <!-- /.panel-heading -->
-                            <div class="panel-body">
-                                <div class="list-group">
-                                    <a href="#" class="list-group-item">
-                                        <i class="fa fa-comment fa-fw"></i> New Comment
-                                        <span class="pull-right text-muted small"><em>4 minutes ago</em>
-                                        </span>
-                                    </a>
-                                    <a href="#" class="list-group-item">
-                                        <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-                                        <span class="pull-right text-muted small"><em>12 minutes ago</em>
-                                        </span>
-                                    </a>
-                                    <a href="#" class="list-group-item">
-                                        <i class="fa fa-envelope fa-fw"></i> Message Sent
-                                        <span class="pull-right text-muted small"><em>27 minutes ago</em>
-                                        </span>
-                                    </a>
-                                    <a href="#" class="list-group-item">
-                                        <i class="fa fa-tasks fa-fw"></i> New Task
-                                        <span class="pull-right text-muted small"><em>43 minutes ago</em>
-                                        </span>
-                                    </a>
-                                    <a href="#" class="list-group-item">
-                                        <i class="fa fa-upload fa-fw"></i> Server Rebooted
-                                        <span class="pull-right text-muted small"><em>11:32 AM</em>
-                                        </span>
-                                    </a>
-                                    <a href="#" class="list-group-item">
-                                        <i class="fa fa-bolt fa-fw"></i> Server Crashed!
-                                        <span class="pull-right text-muted small"><em>11:13 AM</em>
-                                        </span>
-                                    </a>
-                                    <a href="#" class="list-group-item">
-                                        <i class="fa fa-warning fa-fw"></i> Server Not Responding
-                                        <span class="pull-right text-muted small"><em>10:57 AM</em>
-                                        </span>
-                                    </a>
-                                    <a href="#" class="list-group-item">
-                                        <i class="fa fa-shopping-cart fa-fw"></i> New Order Placed
-                                        <span class="pull-right text-muted small"><em>9:49 AM</em>
-                                        </span>
-                                    </a>
-                                    <a href="#" class="list-group-item">
-                                        <i class="fa fa-money fa-fw"></i> Payment Received
-                                        <span class="pull-right text-muted small"><em>Yesterday</em>
-                                        </span>
-                                    </a>
-                                </div>
-                                <!-- /.list-group -->
-                                <a href="#" class="btn btn-default btn-block">View All Alerts</a>
-                            </div>
-                            <!-- /.panel-body -->
-                        </div>
-                        <!-- /.panel -->
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <i class="fa fa-bar-chart-o fa-fw"></i> Donut Chart Example
-                            </div>
-                            <div class="panel-body">
-                                <div id="morris-donut-chart"></div>
-                                <a href="#" class="btn btn-default btn-block">View Details</a>
-                            </div>
-                            <!-- /.panel-body -->
-                        </div>
-                        <!-- /.panel -->
-                        <div class="chat-panel panel panel-default">
-                            <div class="panel-heading">
-                                <i class="fa fa-comments fa-fw"></i> Chat
-                                <div class="btn-group pull-right">
-                                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-                                        <i class="fa fa-chevron-down"></i>
-                                    </button>
-                                    <ul class="dropdown-menu slidedown">
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-refresh fa-fw"></i> Refresh
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-check-circle fa-fw"></i> Available
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-times fa-fw"></i> Busy
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-clock-o fa-fw"></i> Away
-                                            </a>
-                                        </li>
-                                        <li class="divider"></li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-sign-out fa-fw"></i> Sign Out
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- /.panel-heading -->
-                            <div class="panel-body">
-                                <ul class="chat">
-                                    <li class="left clearfix">
-                                        <span class="chat-img pull-left">
-                                            <img src="http://placehold.it/50/55C1E7/fff" alt="User Avatar" class="img-circle" />
-                                        </span>
-                                        <div class="chat-body clearfix">
-                                            <div class="header">
-                                                <strong class="primary-font">Jack Sparrow</strong>
-                                                <small class="pull-right text-muted">
-                                                    <i class="fa fa-clock-o fa-fw"></i> 12 mins ago
-                                                </small>
-                                            </div>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li class="right clearfix">
-                                        <span class="chat-img pull-right">
-                                            <img src="http://placehold.it/50/FA6F57/fff" alt="User Avatar" class="img-circle" />
-                                        </span>
-                                        <div class="chat-body clearfix">
-                                            <div class="header">
-                                                <small class=" text-muted">
-                                                    <i class="fa fa-clock-o fa-fw"></i> 13 mins ago</small>
-                                                    <strong class="pull-right primary-font">Bhaumik Patel</strong>
-                                                </div>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
-                                                </p>
-                                            </div>
-                                        </li>
-                                        <li class="left clearfix">
-                                            <span class="chat-img pull-left">
-                                                <img src="http://placehold.it/50/55C1E7/fff" alt="User Avatar" class="img-circle" />
-                                            </span>
-                                            <div class="chat-body clearfix">
-                                                <div class="header">
-                                                    <strong class="primary-font">Jack Sparrow</strong>
-                                                    <small class="pull-right text-muted">
-                                                        <i class="fa fa-clock-o fa-fw"></i> 14 mins ago</small>
-                                                    </div>
-                                                    <p>
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
-                                                    </p>
-                                                </div>
-                                            </li>
-                                            <li class="right clearfix">
-                                                <span class="chat-img pull-right">
-                                                    <img src="http://placehold.it/50/FA6F57/fff" alt="User Avatar" class="img-circle" />
-                                                </span>
-                                                <div class="chat-body clearfix">
-                                                    <div class="header">
-                                                        <small class=" text-muted">
-                                                            <i class="fa fa-clock-o fa-fw"></i> 15 mins ago</small>
-                                                            <strong class="pull-right primary-font">Bhaumik Patel</strong>
-                                                        </div>
-                                                        <p>
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
-                                                        </p>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!-- /.panel-body -->
-                                        <div class="panel-footer">
-                                            <div class="input-group">
-                                                <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." />
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-warning btn-sm" id="btn-chat">
-                                                        Send
-                                                    </button>
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <!-- /.panel-footer -->
-                                    </div>
-                                    <!-- /.panel .chat-panel -->
-                                </div>
-                                <!-- /.col-lg-4 -->
-                            </div>
-                            <!-- /.row -->
-                        </div>
-                        <!-- /#page-wrapper -->
+    
 
-                    </div>
-                    <!-- /#wrapper -->
+    <!-- Jquery Core Js -->
+    <script src="<?php echo base_url() ?>theme/plugins/jquery/jquery.min.js"></script>
 
-                    <!-- jQuery -->
-                    <script src="<?php echo base_url() ?>theme/vendor/jquery/jquery.min.js"></script>
+    <!-- Bootstrap Core Js -->
+    <script src="<?php echo base_url() ?>theme/plugins/bootstrap/js/bootstrap.js"></script>
 
-                    <!-- Bootstrap Core JavaScript -->
-                    <script src="<?php echo base_url() ?>theme/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Select Plugin Js -->
+    <script src="<?php echo base_url() ?>theme/plugins/bootstrap-select/js/bootstrap-select.js"></script>
 
-                    <!-- Metis Menu Plugin JavaScript -->
-                    <script src="<?php echo base_url() ?>theme/vendor/metisMenu/metisMenu.min.js"></script>
+    <!-- Slimscroll Plugin Js -->
+    <script src="<?php echo base_url() ?>theme/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
 
-                    <!-- Morris Charts JavaScript -->
-                    <script src="<?php echo base_url() ?>theme/vendor/raphael/raphael.min.js"></script>
-                    <script src="<?php echo base_url() ?>theme/vendor/morrisjs/morris.min.js"></script>
-                    <script src="<?php echo base_url() ?>theme/data/morris-data.js"></script>
+    <!-- Waves Effect Plugin Js -->
+    <script src="<?php echo base_url() ?>theme/plugins/node-waves/waves.js"></script>
 
-                    <!-- Custom Theme JavaScript -->
-                    <script src="<?php echo base_url() ?>theme/dist/js/sb-admin-2.js"></script>
+    <!-- Jquery CountTo Plugin Js -->
+    <script src="<?php echo base_url() ?>theme/plugins/jquery-countto/jquery.countTo.js"></script>
 
-                </body>
+    <!-- Morris Plugin Js -->
+    <script src="<?php echo base_url() ?>theme/plugins/raphael/raphael.min.js"></script>
+    <script src="<?php echo base_url() ?>theme/plugins/morrisjs/morris.js"></script>
 
-                </html>
+    <!-- ChartJs -->
+    <script src="<?php echo base_url() ?>theme/plugins/chartjs/Chart.bundle.js"></script>
+
+    <!-- Flot Charts Plugin Js -->
+    <script src="<?php echo base_url() ?>theme/plugins/flot-charts/jquery.flot.js"></script>
+    <script src="<?php echo base_url() ?>theme/plugins/flot-charts/jquery.flot.resize.js"></script>
+    <script src="<?php echo base_url() ?>theme/plugins/flot-charts/jquery.flot.pie.js"></script>
+    <script src="<?php echo base_url() ?>theme/plugins/flot-charts/jquery.flot.categories.js"></script>
+    <script src="<?php echo base_url() ?>theme/plugins/flot-charts/jquery.flot.time.js"></script>
+
+    <!-- Sparkline Chart Plugin Js -->
+    <script src="<?php echo base_url() ?>theme/plugins/jquery-sparkline/jquery.sparkline.js"></script>
+
+    <!-- Custom Js -->
+    <script src="<?php echo base_url() ?>theme/js/admin.js"></script>
+    <script src="<?php echo base_url() ?>theme/js/pages/index.js"></script>
+
+    <!-- Demo Js -->
+    <script src="<?php echo base_url() ?>theme/js/demo.js"></script>
+</body>
+
+</html>
