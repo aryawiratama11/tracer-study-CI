@@ -17,7 +17,7 @@
 				<small>Silahkan Login dengan NPM, Password AMIKOM dan Password Perusahaan anda</small>
 			</div>
 			<hr>
-			<?php echo form_open("auth/cek_login"); ?>
+			<?php echo form_open("tracer/login"); ?>
 			<div class="field-login">
 				<div class="input-group input-group-l">
 					<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>

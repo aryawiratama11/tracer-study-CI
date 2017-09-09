@@ -22,15 +22,15 @@ class Auth extends CI_Controller {
 				$this->session->set_userdata($sess_data);
 			}
 			if ($this->session->userdata('akseslv')=='admin') {
-				//redirect('admin/admin_kampus');
-				echo "<script>alert('admin');history.go(-1);</script>";
+				redirect('dashboard/admin');
+				//echo "<script>alert('admin');history.go(-1);</script>";
 			}
 			elseif ($this->session->userdata('akseslv')=='perusahaan') {
-				echo "<script>alert('perusahaan');history.go(-1);</script>";
-				//redirect('admin/admin_perusahaan');
+				//echo "<script>alert('perusahaan');history.go(-1);</script>";
+				redirect('dashboard/company');
 			}
 			elseif ($this->session->userdata('akseslv')=='mahasiswa') {
-				redirect('admin/admin_mhs');	
+				redirect('dashboard/alumni');	
 				//echo "<script>alert('embuh lah mahasiswa');history.go(-1);</script>";	
 			}		
 		}

@@ -49,6 +49,37 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'auth';
+$route['default_controller'] = 'auth/index';
+
+//login
+$route['tracer/login'] = 'auth/cek_login';
+
+//mahasiswa
+$route['dashboard/alumni'] = 'mahasiswa/admin_mhs/index';
+$route['dashboard/alumni/biodata'] = 'mahasiswa/admin_mhs/user';
+$route['dashboard/alumni/isitracer'] = 'mahasiswa/admin_mhs/isitracer';
+$route['dashboard/alumni/logout'] = 'mahasiswa/admin_mhs/logout';
+//perusahaan
+$route['dashboard/company'] = 'perusahaan/admin_perusahaan/index';
+$route['dashboard/company/biodata'] = 'perusahaan/admin_perusahaan/dataperusahaan';
+$route['dashboard/company/dataalumni'] = 'perusahaan/admin_perusahaan/dataalumni';
+$route['dashboard/company/logout'] = 'perusahaan/admin_perusahaan/logout';
+//admin
+$route['dashboard/admin'] = 'admin/admin_kampus/index';
+$route['dashboard/admin/dataadmin'] = 'admin/admin_kampus/profil_adm';
+$route['dashboard/admin/tambahadmin'] = 'admin/admin_kampus/tambah_adm';
+$route['dashboard/admin/editadmin'] = 'admin/admin_kampus/edit_adm';
+
+$route['dashboard/admin/dataalumni'] = 'admin/admin_kampus/data_alumni';
+$route['dashboard/admin/tambahdataalumni'] = 'admin/admin_kampus/tambah_alumni';
+$route['dashboard/admin/generating'] = 'admin/admin_kampus/save_alumni';
+$route['dashboard/admin/updating'] = 'admin/admin_kampus/save_edit_alumni/'; 
+
+$route['dashboard/admin/dataperusahaan'] = 'admin/admin_kampus/data_perusahaan';
+$route['dashboard/admin/tambahdataperusahaan'] = 'admin/admin_kampus/tambah_company';
+$route['dashboard/admin/updateperusahaan'] = 'admin/admin_kampus/edit_company';
+$route['dashboard/admin/logout'] = 'admin/admin_kampus/logout';
+
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
