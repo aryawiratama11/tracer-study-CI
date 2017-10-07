@@ -57,6 +57,20 @@
 
     <!-- Waves Effect Plugin Js -->
     <script src="<?php echo base_url() ?>theme/plugins/node-waves/waves.js"></script>
+        <!-- Autosize Plugin Js -->
+    <script src="<?php echo base_url() ?>theme/plugins/autosize/autosize.js"></script>
+
+        <!-- Jquery DataTable Plugin Js -->
+    <script src="<?php echo base_url() ?>theme/plugins/jquery-datatable/jquery.dataTables.js"></script>
+    <script src="<?php echo base_url() ?>theme/plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js"></script>
+    <script src="<?php echo base_url() ?>theme/plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js"></script>
+    <script src="<?php echo base_url() ?>theme/plugins/jquery-datatable/extensions/export/buttons.flash.min.js"></script>
+    <script src="<?php echo base_url() ?>theme/plugins/jquery-datatable/extensions/export/jszip.min.js"></script>
+    <script src="<?php echo base_url() ?>theme/plugins/jquery-datatable/extensions/export/pdfmake.min.js"></script>
+    <script src="<?php echo base_url() ?>theme/plugins/jquery-datatable/extensions/export/vfs_fonts.js"></script>
+    <script src="<?php echo base_url() ?>theme/plugins/jquery-datatable/extensions/export/buttons.html5.min.js"></script>
+    <script src="<?php echo base_url() ?>theme/plugins/jquery-datatable/extensions/export/buttons.print.min.js"></script>
+
 
     <!-- Jquery CountTo Plugin Js -->
     <script src="<?php echo base_url() ?>theme/plugins/jquery-countto/jquery.countTo.js"></script>
@@ -64,6 +78,7 @@
     <!-- Morris Plugin Js -->
     <script src="<?php echo base_url() ?>theme/plugins/raphael/raphael.min.js"></script>
     <script src="<?php echo base_url() ?>theme/plugins/morrisjs/morris.js"></script>
+
 
     <!-- ChartJs -->
     <script src="<?php echo base_url() ?>theme/plugins/chartjs/Chart.bundle.js"></script>
@@ -77,13 +92,20 @@
 
     <!-- Sparkline Chart Plugin Js -->
     <script src="<?php echo base_url() ?>theme/plugins/jquery-sparkline/jquery.sparkline.js"></script>
-        <!-- JQuery Steps Plugin Js -->
-    <script src="<?php echo base_url() ?>theme/plugins/jquery-steps/jquery.steps.js"></script>
+
+    <!-- Bootstrap Material Datetime Picker Plugin Js -->
+    <script src="<?php echo base_url() ?>theme/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+
+        <!-- SweetAlert Plugin Js -->
+    <script src="<?php echo base_url() ?>theme/plugins/sweetalert/sweetalert.min.js"></script>
 
     <!-- Custom Js -->
     <script src="<?php echo base_url() ?>theme/js/admin.js"></script>
-    <!-- <script src="<?php echo base_url() ?>theme/js/pages/index.js"></script> -->
-    <script src="<?php echo base_url() ?>theme/js/pages/forms/form-wizard.js"></script>
+ <!--   <script src="<?php echo base_url() ?>theme/js/pages/index.js"></script> -->
+    <script src="<?php echo base_url() ?>theme/js/pages/tables/jquery-datatable.js"></script>
+     <script src="<?php echo base_url() ?>theme/js/pages/ui/dialogs.js"></script>
+    <!--<script src="<?php echo base_url() ?>theme/js/pages/widgets/infobox/infobox-1.js"></script> -->
+    <!-- <script src="<?php echo base_url() ?>theme/js/pages/ui/dialogs.js"></script> -->
 
     <!-- Demo Js -->
     <script src="<?php echo base_url() ?>theme/js/demo.js"></script>

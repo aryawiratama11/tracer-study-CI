@@ -49,20 +49,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'auth/index';
+$route['default_controller'] = 'register/index';
 
 //login
 $route['tracer/login'] = 'auth/cek_login';
-
+//Register
+$route['tracer/register'] = 'register/register';
 //mahasiswa
 $route['dashboard/alumni'] = 'mahasiswa/admin_mhs/index';
 $route['dashboard/alumni/biodata'] = 'mahasiswa/admin_mhs/user';
-$route['dashboard/alumni/isitracer'] = 'mahasiswa/admin_mhs/isitracer';
+$route['dashboard/alumni/dataalumni'] = 'mahasiswa/admin_mhs/data_alumni';
 $route['dashboard/alumni/logout'] = 'mahasiswa/admin_mhs/logout';
 //perusahaan
 $route['dashboard/company'] = 'perusahaan/admin_perusahaan/index';
 $route['dashboard/company/biodata'] = 'perusahaan/admin_perusahaan/dataperusahaan';
 $route['dashboard/company/dataalumni'] = 'perusahaan/admin_perusahaan/dataalumni';
+$route['dashboard/company/updateperusahaan'] = 'perusahaan/admin_perusahaan/edit_company';
+$route['dashboard/company/traceralumni'] = 'perusahaan/admin_perusahaan/tracerAlumni';
+$route['dashboard/company/updatingdata'] = 'perusahaan/admin_perusahaan/edit_alumni';
 $route['dashboard/company/logout'] = 'perusahaan/admin_perusahaan/logout';
 //admin
 $route['dashboard/admin'] = 'admin/admin_kampus/index';

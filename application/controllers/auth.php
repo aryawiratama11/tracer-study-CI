@@ -7,9 +7,12 @@ class Auth extends CI_Controller {
 	}
 
 	public function cek_login() {
-		$data = array('nim' => $this->input->post('user_id', TRUE),
+		
+			$data = array(
+					'email' => $this->input->post('user_id', TRUE),
 					'password' => md5($this->input->post('pass_id', TRUE))
 			);
+		
 		$this->load->model('m_user'); // load model_user
 		$hasil = $this->m_user->cek_user($data);
 		if ($hasil->num_rows() == 1) {
@@ -17,6 +20,7 @@ class Auth extends CI_Controller {
 				$sess_data['logged_in'] = 'Sudah Loggin';
 				$sess_data['id'] = $sess->id;
 				$sess_data['nim'] = $sess->nim;
+				$sess_data['email'] = $sess->email;
 				$sess_data['password'] = $sess->password;
 				$sess_data['akseslv'] = $sess->akseslv;
 				$this->session->set_userdata($sess_data);

@@ -4,6 +4,9 @@
 	<title>Login</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>asset/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>asset/css/readmore.css">
+	<!-- <link href="<?php echo base_url();?>theme/css/style.css" rel="stylesheet"> -->
+	   <!-- <script src="<?php echo base_url();?>theme/plugins/jquery/jquery.min.js"></script> -->
+	   <!-- <script src="<?php echo base_url();?>theme/plugins/jquery-validation/jquery.validate.js"></script> -->
 </head>
 <body>
 
@@ -32,26 +35,25 @@
 						<input type="password" name="pass_id" class="form-control" placeholder="Password">		                    
 					</div>
 				</div>
-
-				<!--
-				<div class="input-group input-group-l">
-					<span class="input-group-addon"><i class="glyphicon glyphicon-ok"></i></span>
+				
+<!-- 				<div class="input-group input-group-l">
+					
 					<div class="fg-line">
-						<div class="g-recaptcha" data-sitekey="6LeZ8A8UAAAAAFveA2IdqSqGKy8617HV8J_7olgK">
-							<div style="width: 304px; height: 78px;">
-								<div>
-									<iframe src="https://www.google.com/recaptcha/api2/anchor?k=6LeZ8A8UAAAAAFveA2IdqSqGKy8617HV8J_7olgK&amp;co=aHR0cDovL2F1dGguYW1pa29tLmFjLmlkOjgw&amp;hl=in&amp;v=r20170717162708&amp;size=normal&amp;cb=yoikm930nle6" title="widget recaptcha" width="304" height="78" frameborder="0" scrolling="no" sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation">
-									</iframe>
-								</div>
-								<textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;  display: none; "></textarea>
-							</div>
-						</div>
+						<div class="form-group">
+                        <input type="checkbox" name="terms" id="terms" class="filled-in chk-col-pink">
+                        <label for="terms">I read and agree to the <a href="javascript:void(0);">terms of usage</a>.</label>
+                    </div>
 					</div>
-				</div> -->
+				</div>  -->
+
 				<button type="submit" class="btn btn-login btn-warning"><i class="glyphicon glyphicon-arrow-right"></i></button>
 			</div>
+			<a href="<?php echo base_url(); ?>" style="text-align: center;"><p style="margin-top: 20px">Daftar disini!<p></a>
+
 		</div>
+
 		<?php echo form_close(); ?>
+
 	</div>
 	
 </body>

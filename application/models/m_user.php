@@ -6,6 +6,17 @@ class M_user extends CI_Model{
 		$query = $this->db->get_where('auth', $data);
 		return $query;
 	}
+	public function cek_email_exist($email){
+		$this->db->where('email', $email);
+		$this->db->from('perusahaan');
+		$query = $this->db->get();
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			return $query->result();
+			//return FALSE;
+		}
+	}
 
 	//alumni
 	public function user_mhs($data) {
@@ -19,6 +30,12 @@ class M_user extends CI_Model{
 		$this->db->select('*');
 		$query = $this->db->get('mhs');
 		return $query->result_array();
+	}
+	public function selectAll_mhs_bekerja($id_perusahaan){
+		$this->db->select('*');
+		$this->db->where('id_perusahaan',$id_perusahaan);
+		$result = $this->db->get('mhs')->result_array();
+		return $result;
 	}
 	public function create_mhs($add) {
 		$this->db->insert('mhs', $add);
@@ -48,7 +65,7 @@ class M_user extends CI_Model{
 		$this->db->insert('auth', $auth);
 		return true;
 	}
-		public function selectAll() {
+	public function selectAll() {
 		$this->db->select('*');
 		$query = $this->db->get('auth');
 		return $query->result_array();

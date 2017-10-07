@@ -67,19 +67,22 @@ class Admin_mhs extends CI_Controller {
 			$this->load->view('dashboard/mhs', $data);
 		}
 
-		public function isitracer(){
+		public function data_alumni(){
 			$data['nim'] = $this->search_result['nim'];
 			$data['username'] = $this->search_result['nama'];
+			$data['email'] = $this->search_result['email'];
 			$data['profil_p'] = $this->search_result['photo'];
-			$data['datauser'] = 'dashboard/mhs_tracer';
-			$data['title'] = 'Dashboard | Isi Tracer';
-
 			$data['class1'] = 'inactive';
 			$data['class2'] = 'inactive';
 			$data['class3'] = 'active';
 			$data['class4'] = 'inactive';
+			$data['users'] = $this->m_user->selectAll_mhs();
+
+			$data['title'] = 'Dashboard | Data Alumni';
+			$data['datauser'] = 'dashboard/mhs_tracer';
 
 			$this->load->view('dashboard/mhs', $data);
+
 		}
 
 		public function logout() {

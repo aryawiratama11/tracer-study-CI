@@ -48,13 +48,19 @@
                     <li class="<?php echo $class2; ?>">
                         <a href="<?php echo base_url('dashboard/alumni/biodata'); ?>">
                             <i class="material-icons">account_circle</i>
-                            <span>Data Alumni</span>
+                            <span>Profil Alumni</span>
                         </a>
                     </li>
                     <li class="<?php echo $class3; ?>">
-                        <a href="<?php echo base_url('dashboard/alumni/isitracer'); ?>">
-                            <i class="material-icons">mode_edit</i>
-                            <span>Isi Tracer Study</span>
+                        <a href="<?php echo base_url('dashboard/alumni/dataalumni'); ?>">
+                            <i class="material-icons">people</i>
+                            <span>Data Alumni</span>
+                        </a>
+                    </li>
+                    <li class="<?php echo $class4; ?>">
+                        <a href="<?php echo base_url('dashboard/alumni/dataalumni'); ?>">
+                            <i class="material-icons">people</i>
+                            <span>Data Perusahaan</span>
                         </a>
                     </li>
                 </ul>

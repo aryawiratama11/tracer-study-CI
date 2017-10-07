@@ -22,6 +22,7 @@ class Admin_kampus extends CI_Controller {
 			$data['username'] = $this->search_result['nama'];
 			$data['email'] = $this->search_result['email'];
 			$data['profil_p'] = $this->search_result['photo'];
+			$data['users'] = $this->m_user->selectAll_mhs();
 		//view
 			$data['contentadmin'] = 'admin/dashboard';
 		//title

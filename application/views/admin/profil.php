@@ -6,7 +6,7 @@
         <div class="card">
           <div class="header bg-deep-purple">
             <h2>
-              Data Perusahaan
+              Data Admin
               <small>Klik icon <code>+</code> Disamping kanan untuk menambah data</small>
             </h2>
             <div class="header-dropdown m-r--5">
@@ -29,15 +29,6 @@
                     <th>Action</th>                                        
                   </tr>
                 </thead>
-                <tfoot>
-                  <tr>
-                    <th>No</th>
-                    <th>Nim</th>
-                    <th>Nama</th>
-                    <th>Email</th>
-                    <th>Action</th>  
-                  </tr>
-                </tfoot>
                 <tbody>
                   <?php $i=1; foreach ($users as $user) { ?>
                   <tr>
@@ -48,12 +39,12 @@
                     <td>
                       <a href="#" class="btn bg-green waves-effect waves-float" data-toggle="modal" 
                       data-target="#lihat-<?php echo strtr($user['nim'], array('.' => '-')); ?>">
-                      <i class="material-icons">visibility</i></a>
+                      <b>Lihat</b></a>
 
                       <a href="#" data-toggle="modal" data-target="#edit-<?php echo strtr($user['nim'], array('.' => '-')); ?>" class="btn btn-warning waves-effect waves-float">
-                        <i class="material-icons">mode_edit</i></a>
+                        <b>Edit</b></a>
                         <a href="<?php echo base_url().'admin/admin_kampus/delete_adm/'.$user['nim']; ?>" class="btn bg-red waves-effect waves-float">
-                          <i class="material-icons">delete_forever</i></a>
+                          <b>Hapus</b></a>
                         </td>    
                       </tr>
                       <?php } ?>
@@ -72,8 +63,8 @@
     <div class="modal fade" id="tambah" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" id="defaultModalLabel">Add Users</h4>
+          <div class="modal-header bg-deep-purple">
+            <h4 class="modal-title" id="defaultModalLabel">Tambah data</h4>
           </div>
           <form method="post" action="<?php echo base_url('dashboard/admin/tambahadmin'); ?>" enctype="multipart/form-data">
             <div class="modal-body">
@@ -142,8 +133,8 @@
           </table>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-link waves-effect">SAVE CHANGES</button>
-          <button type="button" class="btn btn-link waves-effect" data-dismiss="modal">CLOSE</button>
+          <button type="submit" class="btn bg-green waves-effect">Simpan</button>
+          <button type="button" class="btn bg-red waves-effect" data-dismiss="modal">Batal</button>
         </div>
       </form>
     </div>
@@ -156,7 +147,7 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header bg-deep-purple">
-        <h4 class="modal-title">User Information</h4>
+      <h4 class="modal-title">Informasi Admin</h4>
       </div>
       <div class="modal-body">
 
@@ -223,12 +214,8 @@
         </div>
       </div>
       <div class="modal-footer">
-
-        <a href="#" class="btn bg-orange waves-effect" >
-          <i class="material-icons">mode_edit</i> Edit
-        </a>
         <button type="button" class="btn bg-red waves-effect" data-dismiss="modal" >
-          <i class="material-icons">close</i> Close
+          <b>Keluar</b>
         </button>
 
       </div>
@@ -243,8 +230,8 @@
 <div class="modal fade" id="edit-<?php echo strtr($user['nim'], array('.' => '-')); ?>" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title" id="defaultModalLabel">Edit User</h4>
+      <div class="modal-header bg-deep-purple">
+        <h4 class="modal-title" id="defaultModalLabel">Edit User Admin</h4>
       </div>
       <form method="post" action="<?php echo base_url('dashboard/admin/editadmin'); ?>" enctype="multipart/form-data">
         <div class="modal-body">
@@ -262,8 +249,8 @@
               </td>
             </tr>
             <td>Nama</td>
-              <td><input type="text" name='nama' class="form-control" 
-                value="<?php echo $user['nama']; ?>" ></td>
+            <td><input type="text" name='nama' class="form-control" 
+              value="<?php echo $user['nama']; ?>" ></td>
               
             </tr>
             <tr>
@@ -310,8 +297,8 @@
           </table>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-link waves-effect">SAVE CHANGES</button>
-          <button type="button" class="btn btn-link waves-effect" data-dismiss="modal">CLOSE</button>
+          <button type="submit" class="btn bg-green waves-effect">Simpan</button>
+          <button type="button" class="btn bg-red waves-effect" data-dismiss="modal">Batal</button>
         </div>
       </form>
     </div>

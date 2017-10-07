@@ -21,7 +21,12 @@
             <!-- User Info -->
             <div class="user-info">
                 <div class="image">
-                    <img src="<?php echo $profil_p; ?>" width="50" height="50" alt="User" />
+                    <img src="<?php                  
+                if ($profil_p == null) {
+                 echo base_url().'photo/noimage.png';
+               } else {
+                 echo $profil_p;
+               }?>" width="50" height="50" alt="User" />
                 </div>
                 <div class="info-container">
                     <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $username ?></div>
@@ -33,23 +38,29 @@
             <div class="menu">
                 <ul class="list">
                     <li class="header">MAIN NAVIGATION</li>
-                    <li class="active">
+                    <li class="<?php echo $class1; ?>">
                         <a href="<?php echo base_url('dashboard/company'); ?>">
                             <i class="material-icons">store</i>
                             <span>Dashboard</span>
                         </a>
                     </li>
         
-                    <li>
+                    <li class="<?php echo $class2; ?>">
                         <a href="<?php echo base_url('dashboard/company/biodata'); ?>">
                             <i class="material-icons">account_circle</i>
-                            <span>Data Perusahaan</span>
+                            <span>Profil Perusahaan</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="<?php echo $class3; ?>">
                         <a href="<?php echo base_url('dashboard/company/dataalumni'); ?>">
                             <i class="material-icons">mode_edit</i>
                             <span>Data Alumni</span>
+                        </a>
+                    </li>
+                    <li class="<?php echo $class4; ?>">
+                        <a href="<?php echo base_url('dashboard/company/traceralumni'); ?>">
+                            <i class="material-icons">mode_edit</i>
+                            <span>Tracer Alumni</span>
                         </a>
                     </li>
                 </ul>
